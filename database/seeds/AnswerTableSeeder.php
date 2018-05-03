@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Database\Seeder;
-class AnswerTableSeeder extends Seeder
+class AnswersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
