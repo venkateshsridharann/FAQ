@@ -30,7 +30,7 @@ Route::post('/questions/{question_id}/update', 'QuestionController@update')->nam
 Route::post('/questions/{question_id}/report', 'QuestionController@report')->name('questions.report');
 
 Route::get('/reportedQuestions', 'HomeController@viewReportedQuestions')->name('reportedQuestions');
-
+Route::get('/guest', 'HomeController@guest')->name('guest');
 Route::resources([
     'questions' => 'QuestionController',
 ]);

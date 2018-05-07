@@ -8,6 +8,8 @@
                     <div class="card-header">My Profile</div>
 
                     <div class="card-body ">
+
+                        <span > <img id="ppic" src="https://cdn.patch.com/assets/contrib/images/placeholder-user-photo.png" alt=""></span><br>
                         <span class="font-weight-bold">First Name:</span> {{$profile->fname}}</br>
                         <span class="font-weight-bold">Last Name: </span>{{$profile->lname}}</br>
                         <span class="font-weight-bold">Body: </span>{{$profile->body}}</br>

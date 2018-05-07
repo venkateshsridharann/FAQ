@@ -52,6 +52,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Question')->where('report',1);
     }
+    public function guest()
+    {
+        return $this->hasMany('App\Question')->where('user_id', '>', 0);
+    }
 }
 
 

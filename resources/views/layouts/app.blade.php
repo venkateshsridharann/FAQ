@@ -23,7 +23,7 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+    <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
         <div class="container">
 
 
@@ -32,10 +32,13 @@
                     {{ config('app.name', 'Laravel') }}
                 </a>
             @else
+                <a class="navbar-brand" href="{{ route('guest') }}">
+                    All FAQs
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="navbar-brand" href="{{ route('home') }}">
-                    Home
-                </a>
-                <a class="navbar-brand" href="{{ route('reportedQuestions') }}">
+                    My Questions
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="navbar-brand " href="{{ route('reportedQuestions') }}">
                     View Reported Questions
                 </a>
             @endguest

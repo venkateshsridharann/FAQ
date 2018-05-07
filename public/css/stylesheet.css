@@ -1,5 +1,33 @@
+html, body {
+    background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
+}
 .navbar
 {
     background-color: #005cbf;
+    color: antiquewhite;
+}
 
+#ppic
+{
+    width: 10rem;
+    height:10rem;
+    border: 1px solid black;
+
+}
+.container-box
+{
+    background-color: lightgrey;
+}
+
+.questions
+{   margin: auto;
+    text-align: center;
+    width: 8em;
+    height: 2em;
+    font-size: 20px;
+}
+.card{
+
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: center;
 }

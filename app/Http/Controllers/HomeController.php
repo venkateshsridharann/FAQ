@@ -30,4 +30,9 @@ class HomeController extends Controller
         $questions = $user->questionsreported()->paginate(6);
         return view('report')->with('questions', $questions);
     }
+    public function guest()
+    {    $user = Auth::user();
+         $questions = $user->guest()->paginate(20);
+        return view('guest')->with('questions', $questions);
+    }
 }
