@@ -46,13 +46,13 @@ class QuestionController extends Controller
     {
         $input = $request->validate([
             'body' => 'required|min:5',
-            'report' => 'integer|min:0|max:1',
+            //'report' => 'integer|min:0|max:1',
         ], [
 
             'body.required' => 'Body is required',
             'body.min' => 'Body must be at least 5 characters',
-            'report.min' => 'Only 0 and 1 are allowed',
-            'report.max' => 'Only 0 and 1 are allowed',
+            //'report.min' => 'Only 0 and 1 are allowed',
+            //'report.max' => 'Only 0 and 1 are allowed',
 
         ]);
         $input = request()->all();

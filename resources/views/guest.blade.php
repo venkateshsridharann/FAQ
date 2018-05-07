@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card container-box">
-                    <div class="card-header">Questions
+                    <div class="card-header "><div class="questions">Questions</div>
 
                         <div class="card-body">
 

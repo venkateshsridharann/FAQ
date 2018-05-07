@@ -9,15 +9,21 @@
                     <div class="card-body">
                         @if($edit === FALSE)
                             {!! Form::model($question, ['action' => 'QuestionController@store']) !!}
+                            <div class="form-group">
+                                {!! Form::label('body', 'Body') !!}
+                                {!! Form::text('body', $question->body, ['class' => 'form-control','required' => 'required']) !!}
+                                {!! Form::text('report', '0', ['class' => 'form-control', 'hidden'=>'hidden']) !!}
+
+                            </div>
                         @else()
                             {!! Form::model($question, ['route' => ['questions.update', $question->id], 'method' => 'patch']) !!}
+                            <div class="form-group">
+                                {!! Form::label('body', 'Body') !!}
+                                {!! Form::text('body', $question->body, ['class' => 'form-control','required' => 'required']) !!}
+                                {!! Form::text('report', $question->report, ['class' => 'form-control', 'hidden' => 'hidden']) !!}
+                            </div>
                         @endif
-                        <div class="form-group">
-                            {!! Form::label('body', 'Body') !!}
-                            {!! Form::text('body', $question->body, ['class' => 'form-control','required' => 'required']) !!}
-                            {!! Form::label('report', 'Report') !!}
-                            {!! Form::text('report', $question->report, ['class' => 'form-control', 'required'=>'required']) !!}
-                        </div>
+
                         <button class="btn btn-success float-right" value="submit" type="submit" id="submit">Save
                         </button>
                         {!! Form::close() !!}

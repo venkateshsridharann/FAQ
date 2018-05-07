@@ -19,7 +19,7 @@ class CreateQuestionsTable extends Migration
             $table->longText('body');
             $table->timestamps();
             //$table->boolean('report')->default('0');
-            $table->boolean('report');
+            $table->boolean('report')->default('0');
         });
     }
 
