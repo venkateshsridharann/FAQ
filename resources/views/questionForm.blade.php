@@ -10,11 +10,13 @@
                         @if($edit === FALSE)
                             {!! Form::model($question, ['action' => 'QuestionController@store']) !!}
                         @else()
-                            {!! Form::model($question, ['route' => ['questions.update', $question->id], 'method' => 'patch']) !!}
+                            {!! Form::model($question, ['route' => ['questions.update', $question->id], 'method' => 'post']) !!}
                         @endif
                         <div class="form-group">
                             {!! Form::label('body', 'Body') !!}
                             {!! Form::text('body', $question->body, ['class' => 'form-control','required' => 'required']) !!}
+                            {!! Form::label('report', 'Report') !!}
+                            {!! Form::text('report', $question->report, ['class' => 'form-control', 'required'=>'required']) !!}
                         </div>
                         <button class="btn btn-success float-right" value="submit" type="submit" id="submit">Save
                         </button>

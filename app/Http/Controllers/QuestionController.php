@@ -46,17 +46,20 @@ class QuestionController extends Controller
     {
         $input = $request->validate([
             'body' => 'required|min:5',
+            'report' => 'integer|min:0|max:1',
         ], [
 
             'body.required' => 'Body is required',
             'body.min' => 'Body must be at least 5 characters',
+            'report.min' => 'Only 0 and 1 are allowed',
+            'report.max' => 'Only 0 and 1 are allowed',
 
         ]);
         $input = request()->all();
-
         $question = new Question($input);
         $question->user()->associate(Auth::user());
         $question->save();
+        print ('done');
 
         return redirect()->route('home')->with('message', 'IT WORKS!');
 
@@ -112,7 +115,7 @@ class QuestionController extends Controller
         $question->body = $request->body;
         $question->save();
 
-        return redirect()->route('questions.show',['question_id' => $question->id])->with('message', 'Saved');
+        return redirect()->route('questions.show',['question_id' => $question])->with('message', 'Saved');
     }
 
     /**
@@ -127,4 +130,15 @@ class QuestionController extends Controller
         return redirect()->route('home')->with('message', 'Deleted');
 
     }
+    public function report(Request $request,$question)
+    {
+        $question1 = new Question();
+        $questiontoreport = $question1->find($question);
+        $questiontoreport->report = 1;
+        $questiontoreport->save();
+
+        return redirect()->route('questions.show',['question_id' => $question])->with('message', 'Saved');
+
+    }
+
 }

@@ -21,6 +21,11 @@
                         <button class="btn btn-danger float-right mr-2" value="submit" type="submit" id="submit">Delete
                         </button>
                         {!! Form::close() !!}
+
+                        {{ Form::open(['method'  => 'POST', 'route' => ['questions.report', $question->id]])}}
+                        <button class="btn btn-danger float-right mr-2" value="report" type="submit" id="report">Report
+                        </button>
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>
@@ -42,6 +47,7 @@
                                        href="{{ route('answers.show', ['question_id'=> $question->id,'answer_id' => $answer->id]) }}">
                                         View
                                     </a>
+
 
                                 </div>
                             </div>

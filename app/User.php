@@ -47,6 +47,11 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Answer');
     }
+
+    public function questionsreported()
+    {
+        return $this->hasMany('App\Question')->where('report',1);
+    }
 }
 
 

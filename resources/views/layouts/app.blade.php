@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/stylesheet.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
@@ -33,6 +34,9 @@
             @else
                 <a class="navbar-brand" href="{{ route('home') }}">
                     Home
+                </a>
+                <a class="navbar-brand" href="{{ route('reportedQuestions') }}">
+                    View Reported Questions
                 </a>
             @endguest
 
@@ -55,6 +59,7 @@
                     @guest
                         <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                         <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
