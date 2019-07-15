@@ -1,4 +1,4 @@
-#faq
+##faq
 
 To run the faq project:
 1.Git Clone https://github.com/Venkateshsridharann/FAQ.git
