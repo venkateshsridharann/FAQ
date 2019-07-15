@@ -1,6 +1,6 @@
-##faq
-
+FAQ
 To run the faq project:
+
 1.Git Clone https://github.com/Venkateshsridharann/FAQ.git
 2.CD into FAQ and run composer install
 3.cp .env.example to .env
